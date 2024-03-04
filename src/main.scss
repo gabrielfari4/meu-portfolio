@@ -8,5 +8,17 @@
 
 // Then add additional custom code here
 img {
-    width: 100px;
+    width: 50%;
+}
+
+@media screen and (min-width: 768px) {
+    img {
+        width: 450px;
+    }
+}
+
+@media screen and (min-width: 992px) {
+    img {
+        width: 550px;
+    }
 }
