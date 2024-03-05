@@ -7,18 +7,41 @@
 @import "../node_modules/bootstrap/scss/bootstrap";
 
 // Then add additional custom code here
-img {
+
+
+.profile {
     width: 50%;
 }
 
 @media screen and (min-width: 768px) {
-    img {
+    .profile {
         width: 450px;
     }
 }
 
 @media screen and (min-width: 992px) {
-    img {
+    .profile {
         width: 550px;
     }
+}
+
+.titulo {
+    color: rgb(51, 255, 255);
+    font-family: "Alegreya SC", serif;
+    font-weight: 400;
+}
+
+.banner {
+    background-image: url(./assets/linhas-brancas.png);
+    width: 100%;
+    // height: 100vh;
+    // background-repeat: no-repeat;
+    background-size: 150% 220%;
+    background-position-x: center;
+    background-position-y: 50%;
+}
+
+.icons {
+    color: white;
+    
 }
