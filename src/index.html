@@ -23,7 +23,7 @@
             <div class="navbar-nav">
               <a class="nav-link active" href="#quem-sou-eu">Quem Sou Eu</a>
               <a class="nav-link" href="#habilidades">Habilidades</a>
-              <a class="nav-link" href="#">Projetos</a>
+              <a class="nav-link" href="#projetos">Projetos</a>
               <a class="nav-link" href="#">Contato</a>
             </div>
           </div>
@@ -31,19 +31,19 @@
       </nav>
       <main>
         <p class="h1 text-center my-4 my-md-5 titulo">Gabriel Faria</p>
-        <div class="text-center banner">
-          <img src="./assets/profile-picture.jpeg" class="img-fluid rounded-circle profile" alt="Foto de rosto de Gabriel Faria">
+        <div class="text-center banner py-3">
+          <img src="./assets/profile-pic.png" class="img-fluid rounded-circle profile" alt="Foto de rosto de Gabriel Faria">
           
         </div>
         <section class="h-100">
           <div class="d-flex justify-content-center gap-5 my-5">
-            <div><a href="#"><svg class="bi bi-whatsapp icons" width="32" height="32" fill="currentColor">
+            <div><a href="#"><svg class="bi bi-whatsapp icons" width="40" height="40" fill="currentColor">
               <use xlink:href="bootstrap-icons.svg#whatsapp"/>
          </svg></a></div>
-            <div><a href="#" class="icons"><svg class="bi bi-github icons" width="32" height="32" fill="currentColor">
+            <div><a href="#" class="icons"><svg class="bi bi-github icons" width="40" height="40" fill="currentColor">
               <use xlink:href="bootstrap-icons.svg#github"/>
          </svg></a></div>
-            <div><a href="#" class="icons"><svg class="bi bi-linkedin icons" width="32" height="32" fill="currentColor">
+            <div><a href="#" class="icons"><svg class="bi bi-linkedin icons" width="40" height="40" fill="currentColor">
               <use xlink:href="bootstrap-icons.svg#linkedin"/>
          </svg></a></div>
           </div>
@@ -58,37 +58,96 @@
 
         <section class="container">
           <p class="h1 text-center my-4 my-md-5 titulo" id="habilidades">Habilidades</p>
-          <div class="grid gap-0 row-gap-5">
-            
-              <div class="d-flex flex-column align-items-center g-col-4">
-                <img src="./assets/icons/html.svg" alt="" class="habilidades">
-                <p class="text-white texto fs-3">HTML</p>
+          <div class="row gap-0 row-gap-5">
+            <div class="col-4 flip-card">
+              <div class="flip-card-inner">
+                <div class="d-flex flex-column align-items-center flip-card-front">
+                  <img src="./assets/icons/html.svg" alt="" class="habilidades">
+                  <p class="text-white texto fs-3">HTML</p>
+                </div>
+                <div class="flip-card-back">
+                  <p>Lorem ipsum</p>
+                </div>
               </div>
-              <div class="d-flex flex-column align-items-center g-col-4">
+
+            </div>
+            <div class="col-4">
+              <div class="d-flex flex-column align-items-center">
                 <img src="./assets/icons/css.svg" alt="" class="habilidades">
                 <p class="text-white texto fs-3">CSS</p>
               </div>
-              <div class="d-flex flex-column align-items-center g-col-4">
+            </div>
+            <div class="col-4">
+              <div class="d-flex flex-column align-items-center">
                 <img src="./assets/icons/javascript.svg" alt="" class="habilidades">
                 <p class="text-white texto fs-3">JavaScript</p>
               </div>
-
-            
-            
-
-              <div class="d-flex flex-column align-items-center g-col-4">
+            </div>
+            <div class="col-4">
+              <div class="d-flex flex-column align-items-center">
                 <img src="./assets/icons/sass.svg" alt="" class="habilidades">
                 <p class="text-white texto fs-3">SASS</p>
               </div>
-              <div class="d-flex flex-column align-items-center g-col-4">
+            </div>
+            <div class="col-4">
+              <div class="d-flex flex-column align-items-center">
                 <img src="./assets/icons/bootstrap.svg" alt="" class="habilidades">
                 <p class="text-white texto fs-3">Bootstrap</p>
               </div>
-              <div class="d-flex flex-column align-items-center g-col-4">
+            </div>
+            <div class="col-4">
+              <div class="d-flex flex-column align-items-center">
                 <img src="./assets/icons/tailwind.svg" alt="" class="habilidades">
                 <p class="text-white texto fs-3">Tailwind</p>
               </div>
+            </div>
             
+          </div>
+        </section>
+
+        <section class="container">
+          <div>
+            <p class="h1 text-center my-4 my-md-5 titulo"  id="projetos">Projetos</p>
+          </div>
+          <div class="rounded projetos my-5">
+            <div id="carouselExampleCaptions" class="carousel slide">
+              <!-- <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3"></button>
+              </div> -->
+              <div class="carousel-inner">
+                <div class="carousel-item active projeto-image">
+                  <img src="./assets/img/fokus.JPG" class="d-block w-100" alt="...">
+                </div>
+                  <div class="carousel-caption d-none d-md-block legenda">
+                    <h5>First slide label</h5>
+                    <p>Some representative placeholder content for the first slide.</p>
+                  </div>
+                <div class="carousel-item">
+                  <img src="..." class="d-block w-100" alt="...">
+                  <div class="carousel-caption d-none d-md-block">
+                    <h5>Second slide label</h5>
+                    <p>Some representative placeholder content for the second slide.</p>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <img src="..." class="d-block w-100" alt="...">
+                  <div class="carousel-caption d-none d-md-block">
+                    <h5>Third slide label</h5>
+                    <p>Some representative placeholder content for the third slide.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <button class="carousel-control-prev botao-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+              <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next botao-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+              <span class="carousel-control-next-icon" aria-hidden="true"></span>
+              <span class="visually-hidden">Next</span>
+            </button>
           </div>
         </section>
       </main>

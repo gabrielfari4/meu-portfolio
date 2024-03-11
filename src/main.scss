@@ -2,6 +2,7 @@
 
 // Include any default variable overrides here (though functions won't be available)
 // $primary: red;
+$carousel-control-color: black;
 
 
 @import "../node_modules/bootstrap/scss/bootstrap";
@@ -46,10 +47,94 @@
     color: white;
     &:hover {
         color: #e9ecef;
-        transform: scale(1.2);
+        animation-name: iconPulse;
+        animation-duration: 1.3s;
+        animation-iteration-count: infinite;
+    }
+}
+
+@keyframes iconPulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.4);
+    }
+    100% {
+        transform: scale(1);
     }
 }
 
 .habilidades {
-    width: 100px;
+    width: 20vw;
+}
+
+@media screen and (min-width: 992px) {
+    .habilidades {
+        width: 200px;
+    }
+}
+
+
+.flip-card {
+    background-color: transparent;
+    perspective: 1000px;
+}
+
+.flip-card-inner {
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; 
+    backface-visibility: hidden;
+}
+
+.flip-card-back {
+    position: absolute;
+    top: 10%;
+    color: white;
+    transform: rotateY(180deg);
+}
+
+.projetos {
+    background: rgb(233, 236, 239);
+    height: 70vh;
+    width: 100%;
+    border-radius: 20px;
+    padding: 5rem;
+    position: relative;
+}
+
+.projeto-image {
+    height: 400px;
+    width: 800px;
+    object-fit: contain;
+}
+
+.botao-prev {
+    // position: absolute;
+    justify-content: start;
+    padding-left: 1rem;
+}
+
+.botao-next {
+    // position: absolute;
+    justify-content: end;
+    padding-right: 1rem;
+}
+
+.legenda {
+    position: absolute;
+    background-color: black;
 }
