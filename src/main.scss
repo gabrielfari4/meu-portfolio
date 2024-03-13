@@ -33,6 +33,10 @@ $carousel-control-color: black;
     font-weight: 400;
 }
 
+.nav-link:hover {
+    font-weight: 700;
+}
+
 .banner {
     background-image: url(./assets/linhas-brancas.png);
     background-position-x: center;
@@ -66,12 +70,13 @@ $carousel-control-color: black;
 }
 
 .habilidades {
-    width: 20vw;
+    width: 15vw;
 }
 
 @media screen and (min-width: 992px) {
     .habilidades {
-        width: 200px;
+        width: 15vw;
+        max-width: 200px;
     }
 }
 
@@ -88,6 +93,7 @@ $carousel-control-color: black;
     transition: transform 0.8s;
     transform-style: preserve-3d;
 }
+
 
 .flip-card:hover .flip-card-inner {
     transform: rotateY(180deg);
@@ -109,32 +115,78 @@ $carousel-control-color: black;
 
 .projetos {
     background: rgb(233, 236, 239);
-    height: 70vh;
+    height: 80vh;
     width: 100%;
     border-radius: 20px;
-    padding: 5rem;
+    padding: 4rem 8rem;
     position: relative;
 }
 
 .projeto-image {
-    height: 400px;
-    width: 800px;
+    height: 70vh;
+    width: 100%;
     object-fit: contain;
+    left: 50%;
+    transform: translateX(-50%);
+    & img {
+        height: 70%;
+    }
+}
+
+@media screen and (min-width: 1400px) {
+    .projeto-image {
+        width: 90%;
+    }
+}
+
+@media screen and (max-width: 992px) {
+    .projetos {
+        height: 50vh;
+        padding: 3rem 5rem;
+    }
+    .projeto-image {
+        height: 40vh;
+        width: 100%;
+        & img {
+            height: 70%;
+        }
+    }
+    .legenda {
+        height: 10vh;
+        bottom: 0;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .legenda {
+        display: inline;
+        height: 10vh;
+    }
 }
 
 .botao-prev {
     // position: absolute;
     justify-content: start;
-    padding-left: 1rem;
+    padding-left: 2.5rem;
 }
 
 .botao-next {
     // position: absolute;
     justify-content: end;
-    padding-right: 1rem;
+    padding-right: 2.5rem;
+}
+
+@media screen and (max-width: 992px) {
+    .botao-prev {
+        padding-left: 1.5rem;
+    }
+    .botao-next {
+        padding-right: 1.5rem;
+    }
 }
 
 .legenda {
     position: absolute;
+    
     background-color: black;
 }
