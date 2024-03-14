@@ -10,6 +10,7 @@ $carousel-control-color: black;
 // Then add additional custom code here
 
 
+
 .profile {
     width: 50%;
 }
@@ -41,19 +42,18 @@ $carousel-control-color: black;
     background-image: url(./assets/linhas-brancas.png);
     background-position-x: center;
     background-position-y: 50%;
-    // background-repeat: no-repeat;
     background-size: 150% 220%;
-    // height: 100vh;
     width: 100%;
 }
 
 .icons {
     color: white;
+    // Mantenho o hover? Ícone pulsando? Mudo cor?
     &:hover {
-        color: #e9ecef;
-        animation-name: iconPulse;
         animation-duration: 1.3s;
         animation-iteration-count: infinite;
+        animation-name: iconPulse;
+        color: #e9ecef;
     }
 }
 
@@ -69,14 +69,22 @@ $carousel-control-color: black;
     }
 }
 
+// Mudar família/tamanho/cor? Modifico somente a letra inicial?
+
 .habilidades {
-    width: 15vw;
+    width: 25vw;
+}
+
+@media screen and (min-width: 768px) {
+    .habilidades {
+        width: 20vw;
+    }
 }
 
 @media screen and (min-width: 992px) {
     .habilidades {
-        width: 15vw;
         max-width: 200px;
+        width: 15vw;
     }
 }
 
@@ -87,11 +95,11 @@ $carousel-control-color: black;
 }
 
 .flip-card-inner {
-    width: 100%;
     height: 100%;
     text-align: center;
-    transition: transform 0.8s;
     transform-style: preserve-3d;
+    transition: transform 0.8s;
+    width: 100%;
 }
 
 
@@ -100,42 +108,63 @@ $carousel-control-color: black;
 }
 
 .flip-card-front, .flip-card-back {
-    width: 100%;
+    backface-visibility: hidden;
     height: 100%;
     -webkit-backface-visibility: hidden; 
-    backface-visibility: hidden;
+    width: 100%;
 }
 
 .flip-card-back {
-    position: absolute;
-    top: 10%;
     color: white;
+    position: absolute;
+    top: 5%;
+    left: 10%;
     transform: rotateY(180deg);
+    width: 80%;
+    font-size: 20px;
+    border: solid 1px rgba($color: gray, $alpha: 0.5);
+    border-radius: 5px;
+    overflow: auto;
+}
+
+@media screen and (max-width: 992px) {
+    .flip-card-back {
+        top: 5%;
+        width: 80%;
+        left: 15%;
+        height: fit-content;
+        & p {
+            font-size: 1rem;
+        }
+    }
 }
 
 .projetos {
     background: rgb(233, 236, 239);
-    height: 80vh;
-    width: 100%;
     border-radius: 20px;
+    height: 80vh;
     padding: 4rem 8rem;
     position: relative;
+    width: 100%;
 }
 
 .projeto-image {
-    height: 70vh;
-    width: 100%;
-    object-fit: contain;
     left: 50%;
+    height: 70vh;
+    object-fit: contain;
     transform: translateX(-50%);
+    width: 100%;
+    // Deixo o object-fit como contain/cover/fill?
     & img {
         height: 70%;
+        object-fit: contain;
     }
 }
 
 @media screen and (min-width: 1400px) {
     .projeto-image {
         width: 90%;
+        
     }
 }
 
@@ -149,11 +178,13 @@ $carousel-control-color: black;
         width: 100%;
         & img {
             height: 70%;
+            // Deixo o object-fit como contain/cover/fill?
+            object-fit: contain;
         }
     }
     .legenda {
-        height: 10vh;
         bottom: 0;
+        height: 10vh;
     }
 }
 
@@ -186,7 +217,7 @@ $carousel-control-color: black;
 }
 
 .legenda {
-    position: absolute;
-    
     background-color: black;
+    // position: absolute;
+    
 }

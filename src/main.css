@@ -12002,10 +12002,10 @@ textarea.form-control-lg {
   color: white;
 }
 .icons:hover {
-  color: #e9ecef;
-  animation-name: iconPulse;
   animation-duration: 1.3s;
   animation-iteration-count: infinite;
+  animation-name: iconPulse;
+  color: #e9ecef;
 }
 
 @keyframes iconPulse {
@@ -12020,13 +12020,18 @@ textarea.form-control-lg {
   }
 }
 .habilidades {
-  width: 15vw;
+  width: 25vw;
 }
 
+@media screen and (min-width: 768px) {
+  .habilidades {
+    width: 20vw;
+  }
+}
 @media screen and (min-width: 992px) {
   .habilidades {
-    width: 15vw;
     max-width: 200px;
+    width: 15vw;
   }
 }
 .flip-card {
@@ -12035,11 +12040,11 @@ textarea.form-control-lg {
 }
 
 .flip-card-inner {
-  width: 100%;
   height: 100%;
   text-align: center;
-  transition: transform 0.8s;
   transform-style: preserve-3d;
+  transition: transform 0.8s;
+  width: 100%;
 }
 
 .flip-card:hover .flip-card-inner {
@@ -12047,37 +12052,58 @@ textarea.form-control-lg {
 }
 
 .flip-card-front, .flip-card-back {
-  width: 100%;
-  height: 100%;
   backface-visibility: hidden;
+  height: 100%;
+  -webkit-backface-visibility: hidden;
+  width: 100%;
 }
 
 .flip-card-back {
-  position: absolute;
-  top: 10%;
   color: white;
+  position: absolute;
+  top: 5%;
+  left: 10%;
   transform: rotateY(180deg);
+  width: 80%;
+  font-size: 20px;
+  border: solid 1px rgba(128, 128, 128, 0.5);
+  border-radius: 5px;
+  overflow: auto;
 }
 
+@media screen and (max-width: 992px) {
+  .flip-card-back {
+    top: 5%;
+    width: 80%;
+    left: 15%;
+    height: -moz-fit-content;
+    height: fit-content;
+  }
+  .flip-card-back p {
+    font-size: 1rem;
+  }
+}
 .projetos {
   background: rgb(233, 236, 239);
-  height: 80vh;
-  width: 100%;
   border-radius: 20px;
+  height: 80vh;
   padding: 4rem 8rem;
   position: relative;
+  width: 100%;
 }
 
 .projeto-image {
+  left: 50%;
   height: 70vh;
-  width: 100%;
   -o-object-fit: contain;
      object-fit: contain;
-  left: 50%;
   transform: translateX(-50%);
+  width: 100%;
 }
 .projeto-image img {
   height: 70%;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 @media screen and (min-width: 1400px) {
@@ -12096,10 +12122,12 @@ textarea.form-control-lg {
   }
   .projeto-image img {
     height: 70%;
+    -o-object-fit: contain;
+       object-fit: contain;
   }
   .legenda {
-    height: 10vh;
     bottom: 0;
+    height: 10vh;
   }
 }
 @media screen and (max-width: 768px) {
@@ -12127,6 +12155,5 @@ textarea.form-control-lg {
   }
 }
 .legenda {
-  position: absolute;
   background-color: black;
 }/*# sourceMappingURL=main.css.map */
