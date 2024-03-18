@@ -30,7 +30,7 @@ $carousel-control-color: black;
 .titulo {
     color: rgb(51, 255, 255);
     font-family: "Alegreya SC", serif;
-    font-size: 50px;
+    font-size: 3.5rem;
     font-weight: 400;
 }
 
@@ -47,13 +47,13 @@ $carousel-control-color: black;
 }
 
 .icons {
-    color: white;
-    // Mantenho o hover? Ícone pulsando? Mudo cor?
+    width: 40px;
+    height: 40px;
+    // Mantenho o hover? Ícone pulsando? Mudo cor #e9ecef?
     &:hover {
         animation-duration: 1.3s;
         animation-iteration-count: infinite;
         animation-name: iconPulse;
-        color: #e9ecef;
     }
 }
 
@@ -62,27 +62,34 @@ $carousel-control-color: black;
         transform: scale(1);
     }
     50% {
-        transform: scale(1.4);
+        transform: scale(1.3);
     }
     100% {
         transform: scale(1);
     }
 }
 
+// Quem Sou Eu
 // Mudar família/tamanho/cor? Modifico somente a letra inicial?
 
-.habilidades {
+@media screen and (max-width: 768px) {
+    .habilidades {
+         margin-top: 3rem;
+    } 
+ }
+
+.habilidades__card {
     width: 25vw;
 }
 
 @media screen and (min-width: 768px) {
-    .habilidades {
+    .habilidades__card {
         width: 20vw;
     }
 }
 
 @media screen and (min-width: 992px) {
-    .habilidades {
+    .habilidades__card {
         max-width: 200px;
         width: 15vw;
     }
@@ -121,10 +128,17 @@ $carousel-control-color: black;
     left: 10%;
     transform: rotateY(180deg);
     width: 80%;
-    font-size: 20px;
+    font-size: 1.1em;
     border: solid 1px rgba($color: gray, $alpha: 0.5);
     border-radius: 5px;
-    overflow: auto;
+    // overflow: auto;
+    & p {
+        margin: 0 1rem;
+        position: absolute;
+        top: 50%;
+        -ms-transform: translateY(-50%);
+        transform: translateY(-50%);
+    }
 }
 
 @media screen and (max-width: 992px) {
@@ -132,20 +146,34 @@ $carousel-control-color: black;
         top: 5%;
         width: 80%;
         left: 15%;
+        min-height: 25vh;
         height: fit-content;
+        font-size: 1em;
         & p {
-            font-size: 1rem;
+            margin: 0 .2rem;
+            position: absolute;
+            top: 50%;
+            -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
         }
     }
 }
 
-.projetos {
+
+
+.projetos__carrossel {
     background: rgb(233, 236, 239);
     border-radius: 20px;
     height: 80vh;
     padding: 4rem 8rem;
     position: relative;
     width: 100%;
+}
+
+@media screen and (max-width: 768px) {
+   .projetos {
+        margin-top: 3.5rem;
+   } 
 }
 
 .projeto-image {
@@ -169,7 +197,7 @@ $carousel-control-color: black;
 }
 
 @media screen and (max-width: 992px) {
-    .projetos {
+    .projetos__carrossel {
         height: 50vh;
         padding: 3rem 5rem;
     }
@@ -183,17 +211,11 @@ $carousel-control-color: black;
         }
     }
     .legenda {
-        bottom: 0;
+        bottom: 1rem;
         height: 10vh;
     }
 }
 
-@media screen and (max-width: 768px) {
-    .legenda {
-        display: inline;
-        height: 10vh;
-    }
-}
 
 .botao-prev {
     // position: absolute;
@@ -217,7 +239,26 @@ $carousel-control-color: black;
 }
 
 .legenda {
-    background-color: black;
-    // position: absolute;
-    
+    bottom: 2rem;
+    color: black;
+    & h5 {
+        font-size: 2rem;
+    }
+    & p {
+        font-size: 1.2rem;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .legenda {
+        bottom: 2.5rem;
+        display: inline;
+        height: 13vh;
+        & h5 {
+            font-size: 1.8rem;
+        }
+        & p {
+            font-size: 1rem;
+        }
+    }
 }
