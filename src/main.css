@@ -12072,11 +12072,10 @@ textarea.form-control-lg {
   width: 80%;
   font-size: 1.1em;
   border-radius: 5px;
-  border: solid 1px rgba(128, 128, 128, 0.5);
-  border-radius: 5px;
-  min-height: 25vh;
+  min-height: 20vh;
 }
 .flip-card-back p {
+  translate: 0 -30px;
   margin: 0 1rem;
   position: absolute;
   top: 50%;
@@ -12085,10 +12084,12 @@ textarea.form-control-lg {
 
 @media screen and (max-width: 992px) {
   .flip-card-back {
-    left: 15%;
+    left: 10%;
     height: -moz-fit-content;
     height: fit-content;
     font-size: 1em;
+    min-height: 25vh;
+    padding-right: 0;
   }
   .flip-card-back p {
     margin: 0 0.2rem;
@@ -12096,13 +12097,33 @@ textarea.form-control-lg {
 }
 @media screen and (max-width: 476px) {
   .flip-card-back {
-    top: 0;
     font-size: 0.9em;
     width: 85%;
     translate: 0 -30px;
   }
   .flip-card-back p {
+    translate: 0 -30px;
     line-height: normal;
+  }
+}
+@media screen and (max-width: 405px) {
+  .flip-card-back {
+    height: 30vh;
+  }
+  .flip-card-back p {
+    translate: 0 -30px;
+    left: 5%;
+  }
+}
+@media screen and (max-width: 335px) {
+  .flip-card-back {
+    font-size: 0.8em;
+  }
+  .flip-card-back p {
+    left: 0;
+    width: 100%;
+    top: 50%;
+    transform: translateY(-50%);
   }
 }
 .projetos__carrossel {
