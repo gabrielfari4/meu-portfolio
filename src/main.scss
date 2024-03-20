@@ -353,13 +353,13 @@ $carousel-control-color: black;
 
 @media screen and (max-width: 992px) {
     .botao-prev, .botao-next {
-        margin: 0 1.2rem;
+        margin: auto 1.2rem;
     }
 }
 
 @media screen and (max-width: 768px) {
     .botao-prev, .botao-next {
-        margin: 0 .3rem;
+        margin: auto .3rem;
     }
 }
 
