@@ -32,23 +32,6 @@ $carousel-control-color: black;
     background: #555; 
 }
 
-
-.profile {
-    width: 50%;
-}
-
-@media screen and (min-width: 768px) {
-    .profile {
-        width: 450px;
-    }
-}
-
-@media screen and (min-width: 992px) {
-    .profile {
-        width: 550px;
-    }
-}
-
 .titulo {
     color: rgb(51, 255, 255);
     font-family: "Alegreya SC", serif;
@@ -60,12 +43,34 @@ $carousel-control-color: black;
     font-weight: 700;
 }
 
+/* .primeira {
+    height: 40vh;
+    width: 100vw;
+    img {
+        height: 500px;
+        width: 500px;
+        object-fit: scale-down;
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .primeira > img {
+        height: 639px;
+        width: 639px;
+    }
+} */
+
 .banner {
     background-image: url(./assets/linhas-brancas.png);
     background-position-x: center;
     background-position-y: 50%;
-    background-size: 150% 220%;
+    background-size: 140% 180%;
     width: 100%;
+    img {
+        height: 40vh;
+        width: 40vh;
+        object-fit: scale-down;
+    }
 }
 
 .icons {
@@ -197,6 +202,10 @@ $carousel-control-color: black;
 
 .flip-card:hover .flip-card-inner {
     transform: rotateY(180deg);
+}
+
+.flip-card-front > img {
+    height: 15vh;
 }
 
 .flip-card-front, .flip-card-back {
@@ -391,10 +400,10 @@ $carousel-control-color: black;
 }
 
 footer {
-    margin: 10vh auto 0;
+    margin: 8vh auto 4vh;
 
     section {
-        height: 40vh;
+        height: 30vh;
         width: 90vw;
         margin: auto;
         a {
