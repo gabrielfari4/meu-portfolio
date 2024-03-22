@@ -253,10 +253,10 @@ $carousel-control-color: black;
         // top: 0;
         font-size: .9em;
         width: 85%;
-        translate: 0 -30px;
+        translate: 0 -20px;
         // height: 25vh;
         & p {
-            translate: 0 -30px;
+            translate: 0 -20px;
             line-height: normal;
             // left: 5%;
         }
@@ -267,7 +267,7 @@ $carousel-control-color: black;
     .flip-card-back {
         height: 30vh;
         & p {
-            translate: 0 -30px;
+            translate: 0 -10px;
             left: 5%;
         }
     }
@@ -324,7 +324,10 @@ $carousel-control-color: black;
 @media screen and (max-width: 992px) {
     .projetos__carrossel {
         height: 50vh;
-        padding: 3rem 5rem;
+        padding: 2rem 5rem;
+    }
+    .carousel-inner {
+        height: 50vh;
     }
     .projeto-image {
         height: 40vh;

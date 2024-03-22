@@ -12194,10 +12194,10 @@ textarea.form-control-lg {
   .flip-card-back {
     font-size: 0.9em;
     width: 85%;
-    translate: 0 -30px;
+    translate: 0 -20px;
   }
   .flip-card-back p {
-    translate: 0 -30px;
+    translate: 0 -20px;
     line-height: normal;
   }
 }
@@ -12206,7 +12206,7 @@ textarea.form-control-lg {
     height: 30vh;
   }
   .flip-card-back p {
-    translate: 0 -30px;
+    translate: 0 -10px;
     left: 5%;
   }
 }
@@ -12257,7 +12257,10 @@ textarea.form-control-lg {
 @media screen and (max-width: 992px) {
   .projetos__carrossel {
     height: 50vh;
-    padding: 3rem 5rem;
+    padding: 2rem 5rem;
+  }
+  .carousel-inner {
+    height: 50vh;
   }
   .projeto-image {
     height: 40vh;
