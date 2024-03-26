@@ -12141,6 +12141,7 @@ textarea.form-control-lg {
   transform-style: preserve-3d;
   transition: transform 0.8s;
   width: 100%;
+  backface-visibility: hidden;
 }
 
 .flip-card:hover .flip-card-inner {
@@ -12281,7 +12282,7 @@ textarea.form-control-lg {
   height: -moz-fit-content;
   height: fit-content;
   justify-content: start;
-  margin-left: 2rem;
+  margin: auto 2rem;
   padding: 1rem;
   width: -moz-fit-content;
   width: fit-content;
@@ -12292,7 +12293,7 @@ textarea.form-control-lg {
   height: -moz-fit-content;
   height: fit-content;
   justify-content: end;
-  margin-right: 2rem;
+  margin: auto 2rem;
   padding: 1rem;
   width: -moz-fit-content;
   width: fit-content;

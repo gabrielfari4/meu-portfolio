@@ -197,6 +197,7 @@ $carousel-control-color: black;
     transform-style: preserve-3d;
     transition: transform 0.8s;
     width: 100%;
+    backface-visibility: hidden;
 }
 
 
@@ -349,7 +350,7 @@ $carousel-control-color: black;
     align-self: center;
     height: fit-content;
     justify-content: start;
-    margin-left: 2rem;
+    margin: auto 2rem;
     padding: 1rem;
     width: fit-content;
 }
@@ -358,7 +359,7 @@ $carousel-control-color: black;
     align-self: center;
     height: fit-content;
     justify-content: end;
-    margin-right: 2rem;
+    margin: auto 2rem;
     padding: 1rem;
     width: fit-content;
 }
